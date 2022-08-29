@@ -1,0 +1,18 @@
+.footer-address{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.footer-address--tel{
+    color: rgba(255, 255, 255, 0.6);
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus,
+        &:hover {
+            color: var(--accent-color);
+        }
+}
+.footer-address--map{
+    color: var(--main-white-color);
+}

@@ -1,0 +1,231 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    max-width: 528px;
+    min-height: 581px;
+
+    background-color: var(--main-white-color);
+
+    padding: 40px;
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+.modal__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @extend %flex-list;
+
+    background: #FFFFFF;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.modal__close-btn {
+    @extend %flex-list;
+    cursor: pointer;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__btn:hover &,
+    .modal__btn:focus &{
+        fill: var(--accent-color);
+    }
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.btn-modal-form {
+    padding: 10px 52px;
+    margin: 0 auto;
+}
+
+.input {
+    width: 448px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline-color: var(--accent-color);
+    }
+}
+
+.modal__comment {
+    width: 448px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    min-height: 138px;
+
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        outline-color: var(--accent-color);
+    }
+}
+
+
+
+.input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-input:focus+& {
+        fill: var(--accent-color);
+    }
+}
+
+.input__form {
+    position: relative;
+}
+
+
+.checkbox__text .checkbox__span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    @extend %flex-list;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__icon {
+    fill: transparent;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .input__checkbox:checked+.checkbox__text & {
+        fill: var(--main-white-color);
+    }
+}
+
+.input__checkbox:checked+.checkbox__text .checkbox__span {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.input__checkbox:focus+.checkbox__text .checkbox__span {
+    border-color: var(--accent-color);
+}
+
+
+
+.checkbox__text {
+    @extend %flex-list;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--primary-text-color);
+
+}
+
+.modal__checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.checkbox__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration-line: underline;
+
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.modal__label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+}
+
+.modal-form__btn {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: var(--main-white-color);
+
+    @extend %flex-list;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden.modal {
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.8);
+}

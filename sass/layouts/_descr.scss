@@ -1,0 +1,28 @@
+.descr__list {
+    @extend %gap-list;
+}
+
+
+.descr__icon {
+    width: 270px;
+    height: 120px;
+    background-color: var(--additional-background-color);
+    @extend %flex-list;
+    margin-bottom: 30px;
+
+}
+
+.descr__item {
+    width: 270px;
+}
+
+.descr__div-title {
+     margin-bottom: 10px;
+}
+
+.descr__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--primary-text-color);
+}
