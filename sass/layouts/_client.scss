@@ -1,5 +1,7 @@
 .client__list {
     @extend %gap-list;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .client__item {
     border: 1px solid #AFB1B8;
@@ -7,7 +9,6 @@
     display: flex;
     width: 170px;
     height: 92px;
-    display: flex;
 }
 .client__link {
     width: 100%;

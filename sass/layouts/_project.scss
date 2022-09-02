@@ -17,7 +17,15 @@
 }
 
 .project__item {
-    width: 370px;
+    max-width: 450px;
+
+    @media screen and (min-width: 768px) {
+            width:354px;
+        }
+    @media screen and (min-width: 1200px) {
+            width: 370px;
+    }
+
 
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -63,11 +71,16 @@
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
-    }
+    } 
 }
 
 .project__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+            justify-content: left;
+        }
 }
