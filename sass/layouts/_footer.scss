@@ -6,12 +6,37 @@
     .logo {
         display: block;
         margin-bottom: 20px;
+       
     }
 }
 
-.footer__container {
+    .footer--tablet {
+        @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
+}
+        }
+
+        .footer__container {
+    @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+}
+}
+.footer__connect{
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 76px;
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-right: 70px;
+        margin-left: 0;
+    }
 }
 .address {
     font-style: normal;
@@ -22,8 +47,16 @@
 }
 
 .footer__soc {
-    margin-left: 70px;
-    margin-right: 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        align-items: flex-start;
+    }
 }
 .soc__title,
 .form__title {
@@ -32,6 +65,7 @@
 .footer-soc__list {
     display: flex;
     gap: 10px;
+    
 }
 .footer-soc__link {
     width: 44px;
@@ -55,9 +89,22 @@
 .footer-soc__icon {
     fill: var(--main-white-color);
 }
-.footer__reg {
+.footer__form{
     display: flex;
+    flex-direction: column;
     align-items: center;
+   
+
+    @media screen and (min-width: 1200px) {
+       align-items: flex-start;
+    }
+}
+.footer__reg {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        
+    }
+    
 }
 
 .footer__input {
@@ -68,6 +115,8 @@
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
+
+    margin-bottom: 20px;
 
     &::placeholder {
         font-weight: 400;
@@ -80,7 +129,8 @@
 .btn__reg {
     width: 200px;
     height: 50px;
-    margin-left: 12px;
+    margin-left: auto;
+    margin-right: auto;
 
     @extend %flex-list;
     cursor: pointer;
@@ -91,6 +141,10 @@
     &:focus {
         background-color: var(--hover-btn-color);
     }
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 12px;
+        }
 }
 .email__icon {
     margin-left: 10px;
