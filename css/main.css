@@ -247,7 +247,12 @@ body {
 }
 
 .header__logo {
-  margin-right: 93px;
+  margin-right: 88px;
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .navigation {
@@ -274,6 +279,13 @@ body {
           align-items: center;
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .navigation__list .current {
   color: var(--accent-color);
   position: relative;
@@ -297,12 +309,26 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 50px;
-     -moz-column-gap: 50px;
-          column-gap: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 50px;
+  }
 }
 
 .contact__link {
@@ -322,6 +348,11 @@ body {
   margin-left: auto;
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .header__content {
+    display: block;
+  }
+}
 
 .contact__icon {
   fill: currentColor;
@@ -335,6 +366,13 @@ body {
 
 .menu-open-btn {
   margin-left: auto;
+  background: #FFFFFF;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 mob-menu-fixed {
@@ -363,6 +401,15 @@ mob-menu-fixed {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
+}
+.mob-menu.is-hidden {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 
 .menu-close-btn {
@@ -370,6 +417,9 @@ mob-menu-fixed {
   margin-left: auto;
   background: #FFFFFF;
   border: none;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--accent-color);
 }
 
 .navigation-mob-link {

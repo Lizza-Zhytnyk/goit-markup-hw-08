@@ -9,7 +9,11 @@
     }
 }
 .header__logo{
-    margin-right: 93px;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        }
+    
 }
 .navigation{
     display: flex;
@@ -21,6 +25,9 @@
     column-gap: 50px;
     align-items: center;
     display: none;
+@media screen and (min-width: 768px) {
+        display:flex;
+    }
 .current {
         color: var(--accent-color);
         position: relative;
@@ -44,8 +51,16 @@
 
 .contact__list{
     display: flex;
-    column-gap: 50px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
+    align-items: flex-start;
+
+    @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            gap: 50px;
+        }
+    
 }
 
 .contact__link {
@@ -67,6 +82,9 @@
 .header__content {
     margin-left: auto;
     display: none;
+    @media screen and (min-width: 768px) {
+            display:block;
+        }
 }
 
 .contact__icon {
@@ -84,6 +102,11 @@
 
 .menu-open-btn {
     margin-left: auto;
+    background: #FFFFFF;
+    border: none;
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
 
 }
 mob-menu-fixed{
@@ -103,12 +126,26 @@ mob-menu-fixed{
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 1;
+
+    &.is-hidden{
+       display: none;
+    }
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
 }
+
 .menu-close-btn{
     display: block;
     margin-left: auto;
     background: #FFFFFF;
     border: none;
+
+    &:hover,
+    &:focus{
+        fill: var(--accent-color);
+    }
 }
 .navigation-mob-link{
     font-weight: 500;
