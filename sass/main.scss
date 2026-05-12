@@ -1,0 +1,27 @@
+@import './utils/vars';
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+@import './components/container';
+@import './components/logo';
+@import './components/section';
+@import './components/send-btn';
+@import './components/title';
+@import './components/div-title';
+@import './components/card-after-title';
+@import './components/footer-address';
+
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/descr';
+@import './layouts/about';
+@import './layouts/team';
+@import './layouts/client';
+@import './layouts/footer';
+@import './layouts/port-btn';
+@import './layouts/project';
+@import './layouts/modal';
