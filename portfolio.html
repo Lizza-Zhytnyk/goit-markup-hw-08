@@ -17,31 +17,29 @@
     <!--Шапка сайта-->
     <header class="header">
         <div class="container header__container">
-            <a href="./index.html" class="logo header__logo link">Web<span class="logo__accent--header">Studio</span></a>
-            <nav class="navigation">
-    
-                <ul class=" navigation__list list">
-                    <li> <a href="./index.html" class="navigation__link  link ">Студія</a> </li>
-                    <li> <a href="./portfolio.html" class="navigation__link current link">Портфоліо</a> </li>
-                    <li> <a href="#footer" class="navigation__link link">Контакти</a> </li>
-                </ul>
-            </nav>
-            <div class="contact header__content">
-                <ul class="contact__list  list ">
-                    <li class="contact__item">
-                        <a href="mailto:info@devstudio.com" class="contact__link link">
-                            <svg class="contact__icon" width="16" height="12">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg> info@devstudio.com</a>
-                    </li>
-                    <li class="contact__item">
-                        <a href="tel:+380961111111" class="contact__link link">
-                            <svg class="contact__icon" width="10" height="16">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </div>
+        <a href="./index.html" class="logo header__logo link">Web<span class="logo__accent--header">Studio</span></a>
+        <nav class="navigation">
+            
+            <ul class=" navigation__list list">
+                <li > <a href="./index.html" class="navigation__link link ">Студія</a> </li>
+                <li> <a href="./portfolio.html" class="navigation__link current link">Портфоліо</a> </li>
+                <li> <a href="#footer" class="navigation__link link">Контакти</a> </li>
+            </ul>
+        </nav>
+       <div class="contact header__content">
+        <ul class="contact__list  list ">
+        <li class="contact__item"> 
+            <a href="mailto:info@devstudio.com" class="contact__link link"> 
+                <svg class="contact__icon" width="16" height="12">
+                     <use href="./images/icons.svg#icon-envelope"></use>
+                </svg> info@devstudio.com</a></li>
+            <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__link link">
+                    <svg class="contact__icon" width="10" height="16">
+                        <use href="./images/icons.svg#icon-smartphone"></use>
+                    </svg>+38 096 111 11 11</a></li>
+       </ul>
+    </div>
     
             <button type="button" class="menu-open-btn" data-menu-open>
                 <svg class="header-open" width="40" height="40">
@@ -109,15 +107,15 @@
     <div class="container">
     <h1 class="visually-hidden">Приклади проектів</h1>
     <ul class="btn__list list">
-        <li class="btn__item"><button type="button" class="nav__btn nav__btn--active btn">Все</button></li>
-        <li class="btn__item"><button type="button" class="nav__btn btn">Веб-сайти</button></li>
-        <li class="btn__item"><button type="button" class="nav__btn btn">Додатки</button></li>
-        <li class="btn__item"><button type="button" class="nav__btn btn">Дизайн</button></li>
-        <li class="btn__item"><button type="button" class="nav__btn btn">Маркетинг</button></li>
+        <li class="btn__item"><button type="button" class="nav__btn nav__btn--active btn" data-filter="all">Все</button></li>
+        <li class="btn__item"><button type="button" class="nav__btn btn" data-filter="website">Веб-сайти</button></li>
+        <li class="btn__item"><button type="button" class="nav__btn btn" data-filter="app">Додатки</button></li>
+        <li class="btn__item"><button type="button" class="nav__btn btn" data-filter="design">Дизайн</button></li>
+        <li class="btn__item"><button type="button" class="nav__btn btn" data-filter="marketing">Маркетинг</button></li>
     </ul>
 <!--картинки-->
     <ul class="project__list list">
-        <li class="project__item">
+        <li class="project__item" data-category="website">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link"> 
             <div class="project__top-wrap">
                 <picture>
@@ -149,7 +147,7 @@
             
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="design">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
@@ -180,7 +178,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="app">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
         <div class="project__top-wrap">
             <picture>
@@ -212,13 +210,12 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="marketing">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
                     <source srcset="
                         ./images/portfolio4.jpg 1x,
-                        ./images/portfolio4-2x.jpg 2x
                         " media="(min-width:1200px)" />
                     <source srcset="
                         ./images/portfolio4-tab.jpg 1x,
@@ -244,7 +241,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="app">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
@@ -276,7 +273,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="website">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow " class="link project__link ">
             <div class="project__top-wrap">
                 <picture>
@@ -308,7 +305,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="design">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
@@ -340,7 +337,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item"> 
+        <li class="project__item" data-category="marketing"> 
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
@@ -372,7 +369,7 @@
             </div>
         </a>
         </li>
-        <li class="project__item">
+        <li class="project__item" data-category="app">
             <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="link project__link">
             <div class="project__top-wrap">
                 <picture>
@@ -411,7 +408,7 @@
 </section>
     </main>
     <!--футер-->
-    <footer class="footer" id="footer">
+<footer class="footer" id="footer">
         <div class="container footer__container">
             <div class="footer--tablet">
             <div class="footer__connect">
@@ -480,5 +477,6 @@
         </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/portfolio-filter.js"></script>
 </body>
 </html>

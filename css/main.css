@@ -1090,6 +1090,11 @@ mob-menu-fixed {
 .project__top-wrap {
   position: relative;
   overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
 }
 
 .prject__top-text {
